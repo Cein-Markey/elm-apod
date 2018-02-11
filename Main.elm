@@ -1,6 +1,6 @@
 module Main exposing (..)
 
-import Html exposing (h1, label, div, text, img, program)
+import Html exposing (div, h1, img, label, text, program)
 import Html.Attributes exposing (src, style)
 import Html.Events exposing (onClick)
 import Http exposing (..)
