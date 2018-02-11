@@ -21,8 +21,7 @@ type alias Response =
 
 
 type Msg
-    = GetPhoto
-    | LoadPhoto (Result Http.Error Response)
+    = LoadPhoto (Result Http.Error Response)
 
 
 initialModel : Model
@@ -89,9 +88,6 @@ renderImage model =
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        GetPhoto ->
-            ( model, getPhoto )
-
         LoadPhoto (Ok data) ->
             let
                 { title, hdurl, explanation } =
